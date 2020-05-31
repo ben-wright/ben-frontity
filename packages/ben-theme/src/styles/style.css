@@ -1,0 +1,34 @@
+.block-hero h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  color: white;
+}
+
+.block-hero h2 {
+  font-size: 4rem;
+  margin: 0 0 30px 0;
+  color: white;
+}
+
+.block-hero p {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+
+.block-half-half h3 {
+  font-size: 2.6rem;
+}
+.block-half-half p {
+  max-width: 400px;
+  margin: auto;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.block-half-half h4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
