@@ -2,7 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
 import Image from "@frontity/components/image";
-import imageUrl from "../../assets/Ben-Wright-logo.png";
+import imageUrl from "../../assets/Ben-Wright-logo.svg";
 import { Container } from "../styles/theme";
 
 /**
@@ -18,13 +18,19 @@ const Nav = ({ state }) => (
       alignItems: "center",
     }}
   >
-    <Link link="/homepage">
+    <Link link="/">
       <Image src={imageUrl} css={{ width: "220px" }} />
     </Link>
     <ul>
       <HeaderList>
+        <Link link="/work/">Work</Link>
+      </HeaderList>
+      <HeaderList>
         <Link link="/about/">About</Link>
       </HeaderList>
+      {/* <HeaderList>
+        <Link link="/blog/">Blog</Link>
+      </HeaderList> */}
       <a href="mailto:me@benwrightdev.com">
         <OutlineHeaderList>Hire Ben</OutlineHeaderList>
       </a>

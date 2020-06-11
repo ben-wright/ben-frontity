@@ -7,7 +7,7 @@ import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import externalCss from "../styles/style.css";
-import Home from "./Home";
+import PostList from "./post-list";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -16,31 +16,27 @@ import Home from "./Home";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  console.log(data);
+  console.log(state);
 
   return (
     <>
-      {/* Add some metatags to the <head> of the HTML. */}
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
       </Head>
 
-      {/* Add some global styles for the whole site, like body or a's. 
-      Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles} />
       <Global styles={css(externalCss)} />
 
-      {/* Add the header of the site. */}
       <Header />
 
-      {/* Add the main section. It renders a different component depending
-      on the type of URL we are in. */}
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
+          {/* <PostList when={state.source.postsPage === data.link} /> */}
           <Post when={data.isPostType} />
-          <Home when={data.isHome} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
@@ -73,7 +69,4 @@ const globalStyles = css`
   }
 `;
 
-const Main = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+const Main = styled.div``;

@@ -29,12 +29,14 @@ const settings = {
       state: {
         source: {
           api: "https://benwrightdev.com/wp-json",
-          homepage: "/",
+          homepage: "/home/",
+          postsPage: "/blog/",
         },
       },
     },
     "@frontity/tiny-router",
     "@frontity/html2react",
+    "@frontity/head-tags",
   ],
 };
 
