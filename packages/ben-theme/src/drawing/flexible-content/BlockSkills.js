@@ -6,11 +6,11 @@ const BlockSkills = ({ block, Html2React }) => {
   return (
     <SkillsBlock>
       <Container>
-        <SkillsHeading>Skills & Expertise</SkillsHeading>
+        <SkillsHeading>{block.title}</SkillsHeading>
         <SkillsItemContainer>
           {block.items.map((item, i) => {
             return (
-              <Item key={i}>
+              <Item key={i} shadow={block.add_shadow}>
                 <Heading>{item.title}</Heading>
                 <SubHeading>{item.subtitle}</SubHeading>
                 <Line style={{ background: item.color }} />
@@ -46,14 +46,22 @@ const SkillsItemContainer = styled.div`
 `;
 
 const Item = styled.div`
-  width: 100%;
+  width: calc(100% - 40px);
+  margin: 20px;
   padding: 20px;
   box-sizing: border-box;
+  box-shadow: ${(props) => {
+    console.log(props);
+    return props.shadow ? "1px 1px 10px 1px rgba(0,0,0,0.3)" : "none";
+  }};
+
   @media only screen and (min-width: 768px) {
-    width: 50%;
+    width: calc(50% - 40px);
+    margin: 20px;
   }
   @media only screen and (min-width: 992px) {
-    width: 33.33%;
+    width: calc(33.33% - 40px);
+    margin: 20px;
   }
 `;
 

@@ -22,11 +22,14 @@ const Nav = ({ state }) => (
       <Image src={imageUrl} css={{ width: "220px" }} />
     </Link>
     <ul>
-      <HeaderList>
+      {/* <HeaderList>
         <Link link="/work/">Work</Link>
-      </HeaderList>
+      </HeaderList> */}
       <HeaderList>
         <Link link="/about/">About</Link>
+      </HeaderList>
+      <HeaderList>
+        <Link link="/blog/">Blog</Link>
       </HeaderList>
       {/* <HeaderList>
         <Link link="/blog/">Blog</Link>

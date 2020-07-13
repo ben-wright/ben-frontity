@@ -2,6 +2,7 @@ import React from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
+import Footer from "./footer";
 import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
@@ -35,11 +36,13 @@ const Theme = ({ state }) => {
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
-          {/* <PostList when={state.source.postsPage === data.link} /> */}
+          <PostList when={state.source.postsPage === data.link} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
+
+      <Footer />
     </>
   );
 };

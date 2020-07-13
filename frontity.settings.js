@@ -4,7 +4,7 @@ const settings = {
     frontity: {
       url: "https://benwrightdev.com",
       title: "Ben Wright",
-      description: "Frontitiy portfolio website",
+      description: "React Native Developer",
     },
   },
   packages: [
@@ -28,9 +28,17 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "https://benwrightdev.com/wp-json",
+          api: "https://wp.benwrightdev.com/wp-json",
           homepage: "/home/",
           postsPage: "/blog/",
+        },
+      },
+    },
+    {
+      name: "@frontity/google-analytics",
+      state: {
+        googleAnalytics: {
+          trackingId: "UA-53254775-8",
         },
       },
     },
