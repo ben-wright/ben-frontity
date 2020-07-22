@@ -18,6 +18,17 @@ const PostList = ({ state, actions, libraries }) => {
   return data.isReady ? (
     <Container>
       <h1>Post list</h1>
+      {data.items.map((data, index) => {
+        const item = state.source["post"][data.id];
+        console.log(item);
+        return (
+          <a href={item.link} key={index}>
+            <div>
+              <h2>{item.title.rendered}</h2>
+            </div>
+          </a>
+        );
+      })}
     </Container>
   ) : null;
 };

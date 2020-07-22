@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
 import { getBlock } from "../drawing/FlexibleContent";
+import { Container } from "../styles/theme";
 
 const Post = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link);
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
-  const contentBlocks = state.source.page[post.id].acf.content_blocks;
+  const contentBlocks = state.source[data.type][data.id].acf.content_blocks;
 
   /**
    * Once the post has loaded in the DOM, prefetch both the
@@ -20,14 +21,16 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
+    <div>
       {/* Look at the settings to see if we should include the featured image */}
       {state.theme.featured.showOnPost && (
         <FeaturedMedia id={post.featured_media} />
       )}
-
-      {/* Render the content using the Html2React component so the HTML is processed
-       by the processors we included in the libraries.html2react.processors array. */}
+      {data.type === "post" && (
+        <Container>
+          <h1>{state.source[data.type][data.id].title.rendered}</h1>
+        </Container>
+      )}
       <Content>
         {contentBlocks.map((block, index) => {
           return (
@@ -37,13 +40,11 @@ const Post = ({ state, actions, libraries }) => {
           );
         })}
       </Content>
-    </Container>
+    </div>
   ) : null;
 };
 
 export default connect(Post);
-
-const Container = styled.div``;
 
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested

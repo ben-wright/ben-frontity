@@ -4,6 +4,7 @@ import BlockTextHero from "./flexible-content/BlockTextHero";
 import BlockHalfHalf from "./flexible-content/BlockHalfHalf";
 import BlockSkills from "./flexible-content/BlockSkills";
 import BlockGrid from "./flexible-content/BlockGrid";
+import BlockRegularContent from "./flexible-content/BlockRegularContent";
 
 const getBlock = (block, Html2React, state) => {
   switch (block.acf_fc_layout) {
@@ -19,6 +20,8 @@ const getBlock = (block, Html2React, state) => {
       return <BlockSkills block={block} Html2React={Html2React} />;
     case "grid":
       return <BlockGrid block={block} Html2React={Html2React} />;
+    case "regular_content":
+      return <BlockRegularContent block={block} Html2React={Html2React} />;
   }
 };
 
