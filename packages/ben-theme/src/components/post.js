@@ -21,7 +21,7 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <div>
+    <PostContainer>
       {/* Look at the settings to see if we should include the featured image */}
       {state.theme.featured.showOnPost && (
         <FeaturedMedia id={post.featured_media} />
@@ -40,7 +40,7 @@ const Post = ({ state, actions, libraries }) => {
           );
         })}
       </Content>
-    </div>
+    </PostContainer>
   ) : null;
 };
 
@@ -50,13 +50,14 @@ export default connect(Post);
  * This component is the parent of the `content.rendered` HTML. We can use nested
  * selectors to style that HTML.
  */
+
+const PostContainer = styled.div`
+  min-height: 100%;
+`;
+
 const Content = styled.div`
   color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
-
-  * {
-    max-width: 100%;
-  }
 
   p {
     line-height: 1.6em;

@@ -22,9 +22,9 @@ const Nav = ({ state }) => (
       <Image src={imageUrl} css={{ width: "220px" }} />
     </Link>
     <ul>
-      {/* <HeaderList>
+      <HeaderList>
         <Link link="/work/">Work</Link>
-      </HeaderList> */}
+      </HeaderList>
       <HeaderList>
         <Link link="/about/">About</Link>
       </HeaderList>
@@ -34,7 +34,7 @@ const Nav = ({ state }) => (
       {/* <HeaderList>
         <Link link="/blog/">Blog</Link>
       </HeaderList> */}
-      <a href="mailto:me@benwrightdev.com">
+      <a href="https://www.toptal.com/resume/ben-wright#annex-exclusively-accomplished-web-development-contractors">
         <OutlineHeaderList>Hire Ben</OutlineHeaderList>
       </a>
     </ul>

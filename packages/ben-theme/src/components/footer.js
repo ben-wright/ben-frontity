@@ -6,15 +6,8 @@ import { Container } from "../styles/theme";
 
 const Header = ({ state }) => {
   return (
-    <footer>
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingBottom: "15px",
-        }}
-      >
+    <Footer>
+      <FooterContainer>
         <img
           style={{ height: "100%", width: "70px" }}
           className="small-logo"
@@ -35,14 +28,33 @@ const Header = ({ state }) => {
           <a href="https://twitter.com/benwrightdev">
             <Icon src="https://wp.benwrightdev.com/wp-content/themes/ben/assets/twitter-logo.svg" />
           </a>
+          <a href="https://www.upwork.com/freelancers/~015709233c9cd66799">
+            <Icon src="https://wp.benwrightdev.com/wp-content/uploads/2020/10/upwork-tile.svg" />
+          </a>
+          <a href="https://www.toptal.com/resume/ben-wright##annex-exclusively-accomplished-web-development-contractors">
+            <Icon src="https://wp.benwrightdev.com/wp-content/uploads/2020/10/Toptal-Emblem-Blue-RGB.svg" />
+          </a>
         </div>
-      </Container>
-    </footer>
+      </FooterContainer>
+    </Footer>
   );
 };
 
 // Connect the Header component to get access to the `state` in it's `props`
 export default connect(Header);
+
+const FooterContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: 374px) {
+    flex-direction: column;
+  }
+`;
+
+const Footer = styled.footer`
+  padding: 16px 0;
+`;
 
 const Title = styled.h2`
   margin: 0;

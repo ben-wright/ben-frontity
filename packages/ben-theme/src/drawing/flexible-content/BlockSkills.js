@@ -7,7 +7,7 @@ const BlockSkills = ({ block, Html2React }) => {
     <SkillsBlock>
       <Container>
         <SkillsHeading>{block.title}</SkillsHeading>
-        <SkillsItemContainer>
+        <SkillsItemContainer isCenter={block.add_shadow}>
           {block.items.map((item, i) => {
             return (
               <Item key={i} shadow={block.add_shadow}>
@@ -40,6 +40,9 @@ const SkillsItemContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: ${(props) => {
+    return props.isCenter ? "center" : "flex-start";
+  }};
   @media only screen and (min-width: 768px) {
     flex-direction: row;
   }
@@ -52,15 +55,19 @@ const Item = styled.div`
   box-sizing: border-box;
   box-shadow: ${(props) => {
     console.log(props);
-    return props.shadow ? "1px 1px 10px 1px rgba(0,0,0,0.3)" : "none";
+    return props.shadow ? "0px 0px 9px 0px rgba(0, 0, 0, 0.15)" : "none";
   }};
+  border-radius: 10px;
 
   @media only screen and (min-width: 768px) {
     width: calc(50% - 40px);
     margin: 20px;
   }
   @media only screen and (min-width: 992px) {
-    width: calc(33.33% - 40px);
+    width: ${(props) => {
+      return props.shadow ? "calc(45% - 40px)" : "calc(33.33% - 40px)";
+    }};
+
     margin: 20px;
   }
 `;

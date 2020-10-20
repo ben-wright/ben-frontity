@@ -46,6 +46,10 @@ const ContainerChild = styled.div`
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+  img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
+  }
 
   @media only screen and (min-width: 768px) {
     width: 50%;

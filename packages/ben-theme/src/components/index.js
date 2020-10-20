@@ -17,33 +17,25 @@ import PostList from "./post-list";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  console.log(data);
-  console.log(state);
 
   return (
-    <>
+    <Main>
       <Title />
-      <Head>
-        <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
-      </Head>
 
       <Global styles={globalStyles} />
       <Global styles={css(externalCss)} />
 
       <Header />
 
-      <Main>
-        <Switch>
-          <Loading when={data.isFetching} />
-          <PostList when={state.source.postsPage === data.link} />
-          <Post when={data.isPostType} />
-          <PageError when={data.isError} />
-        </Switch>
-      </Main>
+      <Switch>
+        <Loading when={data.isFetching} />
+        <PostList when={state.source.postsPage === data.link} />
+        <Post when={data.isPostType} />
+        <PageError when={data.isError} />
+      </Switch>
 
       <Footer />
-    </>
+    </Main>
   );
 };
 
@@ -72,4 +64,6 @@ const globalStyles = css`
   }
 `;
 
-const Main = styled.div``;
+const Main = styled.div`
+  height: 90%;
+`;

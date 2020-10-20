@@ -5,10 +5,10 @@ import Nav from "./nav";
 
 const Header = ({ state }) => {
   return (
-    <>
+    <HeaderContainer>
       <Container />
       <Nav />
-    </>
+    </HeaderContainer>
   );
 };
 
@@ -16,6 +16,12 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Container = styled.div``;
+
+const HeaderContainer = styled.div`
+  margin-top: -5px;
+  padding-top: 5px;
+  box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2);
+`;
 
 const Title = styled.h2`
   margin: 0;
