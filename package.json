@@ -20,6 +20,6 @@
     "@frontity/tiny-router": "^1.2.0",
     "@frontity/wp-source": "^1.7.0",
     "ben-theme": "./packages/ben-theme",
-    "frontity": "^1.6.0"
+    "frontity": "^1.13.0"
   }
 }

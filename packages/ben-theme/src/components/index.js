@@ -42,13 +42,13 @@ const Theme = ({ state }) => {
 export default connect(Theme);
 
 const globalStyles = css`
-  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+  @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
   html {
     font-size: 12px;
   }
   body {
     height: 100%;
-    font-family: "Roboto", sans-serif;
+    font-family: "Circular Std Book", sans-serif;
     color: #1c1c1c;
     margin: 0;
   }

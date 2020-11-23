@@ -19,7 +19,6 @@ const PostList = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <PostListContainer>
-      <Container>
         <div className="text_hero">
           <div>
             <div className="css-hawqlx-Container e1qbjiff0">
@@ -27,6 +26,7 @@ const PostList = ({ state, actions, libraries }) => {
             </div>
           </div>
         </div>
+      <Container>
         {data.items.map((data, index) => {
           const item = state.source["post"][data.id];
           console.log(item);

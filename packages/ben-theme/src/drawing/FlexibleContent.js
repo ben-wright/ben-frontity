@@ -2,6 +2,7 @@ import React from "react";
 import BlockHero from "./flexible-content/BlockHero";
 import BlockTextHero from "./flexible-content/BlockTextHero";
 import BlockHalfHalf from "./flexible-content/BlockHalfHalf";
+import BlockHalfHalfContent from "./flexible-content/BlockHalfHalfContent";
 import BlockSkills from "./flexible-content/BlockSkills";
 import BlockGrid from "./flexible-content/BlockGrid";
 import BlockWork from "./flexible-content/BlockWork";
@@ -25,6 +26,8 @@ const getBlock = (block, Html2React, state) => {
       return <BlockRegularContent block={block} Html2React={Html2React} />;
     case "work":
       return <BlockWork block={block} Html2React={Html2React} />;
+    case "half_half_content":
+      return <BlockHalfHalfContent block={block} Html2React={Html2React} />;
   }
 };
 

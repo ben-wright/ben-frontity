@@ -14,7 +14,7 @@ const BlockSkills = ({ block, Html2React }) => {
                 <Heading>{item.title}</Heading>
                 <SubHeading>{item.subtitle}</SubHeading>
                 <Line style={{ background: item.color }} />
-                <Paragraph>{item.description}</Paragraph>
+                {item.description && <Paragraph>{item.description}</Paragraph>}
               </Item>
             );
           })}
@@ -52,6 +52,8 @@ const Item = styled.div`
   width: calc(100% - 40px);
   margin: 20px;
   padding: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   box-sizing: border-box;
   box-shadow: ${(props) => {
     console.log(props);
@@ -62,6 +64,7 @@ const Item = styled.div`
   @media only screen and (min-width: 768px) {
     width: calc(50% - 40px);
     margin: 20px;
+    margin-bottom: 0px;
   }
   @media only screen and (min-width: 992px) {
     width: ${(props) => {
@@ -69,6 +72,7 @@ const Item = styled.div`
     }};
 
     margin: 20px;
+    margin-bottom: 0px;
   }
 `;
 
