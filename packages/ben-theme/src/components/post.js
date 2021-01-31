@@ -22,24 +22,26 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <PostContainer>
-      {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
-      {data.type === "post" && (
-        <Container>
-          <h1>{state.source[data.type][data.id].title.rendered}</h1>
-        </Container>
-      )}
-      <Content>
-        {contentBlocks.map((block, index) => {
-          return (
-            <div className={block.acf_fc_layout} key={index}>
-              {getBlock(block, Html2React, state)}
-            </div>
-          );
-        })}
-      </Content>
+      <div style={data.type === "post" ? {background: '#f7f7f7', height: '100vh', padding: '20px'} : {}}>
+        {/* Look at the settings to see if we should include the featured image */}
+        {state.theme.featured.showOnPost && (
+          <FeaturedMedia id={post.featured_media} />
+        )}
+        {data.type === "post" && (
+          <Container>
+            <h1>{state.source[data.type][data.id].title.rendered}</h1>
+          </Container>
+        )}
+        <Content>
+          {contentBlocks.map((block, index) => {
+            return (
+              <div className={block.acf_fc_layout} key={index}>
+                {getBlock(block, Html2React, state)}
+              </div>
+            );
+          })}
+        </Content>
+      </div>
     </PostContainer>
   ) : null;
 };

@@ -28,9 +28,6 @@ const Nav = ({ state }) => (
       <HeaderList>
         <Link link="/about/">About</Link>
       </HeaderList>
-      <HeaderList>
-        <Link link="/blog/">Blog</Link>
-      </HeaderList>
       <a href="https://www.toptal.com/resume/ben-wright#annex-exclusively-accomplished-web-development-contractors">
         <OutlineHeaderList>Hire Ben</OutlineHeaderList>
       </a>

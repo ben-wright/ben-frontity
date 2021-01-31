@@ -56,7 +56,6 @@ const Item = styled.div`
   padding-bottom: 0px;
   box-sizing: border-box;
   box-shadow: ${(props) => {
-    console.log(props);
     return props.shadow ? "0px 0px 9px 0px rgba(0, 0, 0, 0.15)" : "none";
   }};
   border-radius: 10px;

@@ -18,7 +18,7 @@ const BlockWork = ({ block, Html2React, state }) => {
         <GridContainer>
           {block.work_items.map((item, index) => {
             return (
-              <Link link={item.page.url}>
+              <Link link={item.page.url} key={index}>
                 <GridItem key={index} style={{ backgroundColor: item.color }}>
                   <GridItemCon>
                     <Content>
