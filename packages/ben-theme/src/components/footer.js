@@ -11,7 +11,7 @@ const Header = ({ state }) => {
           <FooterContainer>
             <div>
               <h2>Want to work together?</h2>
-              <a href="https://www.toptal.com/resume/ben-wright#annex-exclusively-accomplished-web-development-contractors">Let's talk!</a>
+              <a href="mailto:hello@blueboxdigital.co.uk">Let's talk!</a>
             </div>
             <div className="footer-nav">
               <Link link="/">Home</Link>
