@@ -36,6 +36,7 @@ const Theme = ({ state }) => {
       </Switch>
 
       <Footer />
+      <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
     </Main>
   );
 };

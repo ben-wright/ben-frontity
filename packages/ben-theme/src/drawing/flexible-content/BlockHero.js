@@ -28,7 +28,7 @@ const BlockHero = ({ block, Html2React }) => {
       <Content>
         <InnerContent>
           <Html2React html={block.content} />
-          <WhiteButton href={block.button_url}>{block.button_text}</WhiteButton>
+          <WhiteButton className="mailtoui" href={block.button_url}>{block.button_text}</WhiteButton>
         </InnerContent>
       </Content>
     </BlockHeroContainer>

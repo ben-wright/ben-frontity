@@ -19,7 +19,7 @@ const BlockWork = ({ block, Html2React, state }) => {
           {block.work_items.map((item, index) => {
             return (
               <Link link={item.page.url} key={index}>
-                <GridItem key={index} style={{ backgroundColor: item.color }}>
+                <GridItem key={index} style={{ backgroundColor: item.color, height: '100%' }}>
                   <GridItemCon>
                     <Content>
                       <Heading style={TextStyle}>{item.title}</Heading>
@@ -59,6 +59,12 @@ const GridContainer = styled.div`
   flex-wrap: wrap;
   a {
     width: 50%;
+  }
+  margin-bottom: 64px;
+  @media only screen and (max-width: 768px) {
+    a {
+      width: 100%;
+    }
   }
 `;
 

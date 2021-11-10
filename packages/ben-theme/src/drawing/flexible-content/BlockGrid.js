@@ -11,7 +11,7 @@ const BlockGrid = ({ block, Html2React, state }) => {
         <GridContainer>
           {block.items.map((item, index) => {
             return (
-              <GridItem key={index} style={{ backgroundColor: item.color }}>
+              <GridItem key={index} style={{ backgroundColor: item.color, height: '100%' }}>
                 <Link link={item.page}>
                   <Content>
                     <Heading style={TextStyle}>{item.title}</Heading>

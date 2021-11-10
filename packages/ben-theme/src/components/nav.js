@@ -22,14 +22,8 @@ const Nav = ({ state }) => (
       <Image src={imageUrl} css={{ width: "220px" }} />
     </Link>
     <ul>
-      <HeaderList>
-        <Link link="/work/">Work</Link>
-      </HeaderList>
-      <HeaderList>
-        <Link link="/about/">About</Link>
-      </HeaderList>
-      <a href="mailto:hello@blueboxdigital.co.uk">
-        <OutlineHeaderList>Hire Ben</OutlineHeaderList>
+      <a className="mailtoui" href="mailto:hello@blueboxdigital.co.uk">
+        <OutlineHeaderList>Hire Me</OutlineHeaderList>
       </a>
     </ul>
   </Container>

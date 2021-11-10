@@ -11,13 +11,10 @@ const Header = ({ state }) => {
           <FooterContainer>
             <div>
               <h2>Want to work together?</h2>
-              <a href="mailto:hello@blueboxdigital.co.uk">Let's talk!</a>
+              <a className="mailtoui" href="mailto:hello@blueboxdigital.co.uk">Let's talk!</a>
             </div>
             <div className="footer-nav">
-              <Link link="/">Home</Link>
-              <Link link="/work/">Work</Link>
-              <Link link="/about/">About</Link>
-              <Link link="/blog/">Blog</Link>
+              {/* <Link link="/">Home</Link> */}
             </div>
           </FooterContainer>
         </TopFooter>

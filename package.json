@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
-    "serve": "frontity serve"
+    "serve": "frontity serve",
+    "deploy": "npx vercel --prod"
   },
   "prettier": {},
   "dependencies": {
